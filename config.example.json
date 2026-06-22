@@ -1,0 +1,9 @@
+{
+    "mode": "PVA",
+    "agents": {
+        "1": {
+            "binary": "./engine",
+            "depth": 6
+        }
+    }
+}
