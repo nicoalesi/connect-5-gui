@@ -4,7 +4,7 @@ A Python-based graphical user interface for playing **Connect-5** .
 
 The GUI is built using Pygame and communicates with external agents using a simple stdin/stdout protocol similar to UCI-style engines.
 
-The primary purpose of this software is to support the development and testing of the Omega5 agent engine. It is not designed to be general-purpose, or reusable, and may be freely adapted to suit individual needs.
+The primary purpose of this software is to support the development and testing of the Omega5 agent engine. It is not designed to be general-purpose, or reusable, but it may be freely adapted to suit individual needs.
 
 ---
 
@@ -57,6 +57,20 @@ The configuration is set using a JSON config file.
 `config.json`
 ```json
 {
+    "mode": "PVA",
+    "agents": {
+        "1": {
+            "binary": "./engine",
+            "depth": 6
+        }
+    }
+}
+```
+
+### Example (AVA)
+`config.json`
+```json
+{
   "mode": "AVA",
   "agents": {
       "1": {
@@ -68,20 +82,6 @@ The configuration is set using a JSON config file.
           "depth": 6
       }
   }
-}
-```
-
-### Example (AVA)
-`config.json`
-```json
-{
-    "mode": "PVA",
-    "agents": {
-        "1": {
-            "binary": "./engine",
-            "depth": 6
-        }
-    }
 }
 ```
 
