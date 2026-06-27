@@ -1,3 +1,4 @@
+import os
 import queue
 import subprocess
 import threading
@@ -34,7 +35,8 @@ class AgentInterface ():
             stdout = subprocess.PIPE,
             stderr = subprocess.PIPE,
             text = True,
-            bufsize = 1
+            bufsize = 1,
+            cwd = os.path.dirname(command)
         )
 
         # Queue to store agent's responses
