@@ -147,6 +147,7 @@ class BaseGUI (ABC):
             if count >= 5:
                 print(f"Game over. {self.COLOR_PIECES[color]} has won!")
                 self.game_over = True
+                return
         
         # Check for draw
         if self.plies >= self.BOARD_SIZE**2:
